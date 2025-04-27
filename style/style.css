@@ -136,3 +136,38 @@ body section h3 {
     display: inline-block;
   }
 }/*# sourceMappingURL=style.css.map */
+.swiper {
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 50px 0;
+  position: relative;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 50px;
+  color: rgb(7, 7, 7);
+}
+.slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.text {
+  width: 40%;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.image img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
