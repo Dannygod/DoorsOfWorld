@@ -139,8 +139,68 @@ body{
     //   );
     section{
         padding: 1rem;
+        &#carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto; 
+            overflow: hidden;
+            height: 400px;
+            .carousel-container {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* 圖片自適應容器 */
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out; /* 淡入淡出效果 */
+            }
+            img.active {
+                opacity: 1;
+                z-index: 1;
+            }
+            .carousel-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(108, 0, 0, 0.7); /* 主色深紅色 */
+                color: #fff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 2;
+                font-size: 1.5rem;
+                border-radius: 4px;
+            }
+            .carousel-btn.prev {
+                left: 10px;
+            }
+            .carousel-btn.next {
+                right: 10px;
+            }
+            .carousel-btn:hover {
+                background-color: $third-color;
+            }
+            
+        }
         h3{
             margin-bottom: 1rem;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        section#carousel {
+            height: 250px;
+        }
+
+        section#carousel .carousel-btn {
+            padding: 8px;
+            font-size: 1.2rem;
         }
     }
 }
