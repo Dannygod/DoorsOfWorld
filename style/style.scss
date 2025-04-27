@@ -6,12 +6,13 @@
     font-family: "Noto Sans TC", "Source Sans Pro", sans-serif;
 }
 nav{
-    background-color: rgb(255, 102, 0);
+    background-color: rgb(108, 0, 0);
     padding: 1rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     display: flex;
     align-items: center;
+    color: #fff;
     h1{
         width: 100%;
     }
@@ -27,7 +28,7 @@ nav{
         a{
             padding: 0.5rem;
             text-decoration: none;
-            color: #012d31;
+            color: #fff;
             border-radius: 1rem;
             &:hover{
                 background: #012d31;
@@ -37,6 +38,14 @@ nav{
     }
 }
 body{
+    margin: 0;
+    height: 100%;
+    // background-image: 
+    //   linear-gradient(
+    //     190deg,
+    //     rgba(201, 201, 201, 0.1),
+    //     rgba(85, 85, 85, 0.4)
+    //   );
     section{
         padding: 1rem;
         h3{
