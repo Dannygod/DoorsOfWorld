@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <title>門的故事</title>
+    <title>君不見，青海頭—中國與歐洲的戰爭門類建築展</title>
 </head>
 <body>
 
     <nav>
-        <h1>門的故事——世界各地的門文化</h1>
+        <div class="head-title">
+            君不見，青海頭
+            <br/>
+            <div class="small">
+                中國與歐洲的戰爭門類建築展
+            </div>
+        </div>
         <button class="menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         </button>
@@ -38,73 +44,78 @@
     </nav>
 
     <main>
-        <section id="carouselbg">
+        <section id="carouselbg" class="bg1">
             <section id="carousel">
                 <div class="carousel-container">
-                    <img src="./img/001.jpeg" alt="文化門圖片 1" class="active">
-                    <img src="./img/002.jpeg" alt="文化門圖片 2">
-                    <img src="./img/003.jpeg" alt="文化門圖片 3">
+                    <img src="./img/001.jpeg" alt="文化門圖片 1" class="active" id="i">
+                    <img src="./img/002.jpeg" alt="文化門圖片 2" id="i">
+                    <img src="./img/003.jpeg" alt="文化門圖片 3" id="i">
                 </div>
-                <button class="carousel-btn prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
-                <button class="carousel-btn next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
+                <button class="carousel-btn prev" id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
+                <button class="carousel-btn next" id="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
             </section>
         </section>
         
 
-        <section id="concept">
+        <section id="concept" class="bg2">
             <h3>策展理念與主題</h3>
-            <p>策展理念:  戰爭催生了獨特的建築形式，從城門、城牆到地下掩體，皆是生存與權力的具體表達。本展聚焦「門類建築」在戰爭中的角色，探討其在防禦、象徵與庇護上的多重意涵。透過歷史與現代案例，觀眾將見證這些建築如何在極端環境下孕育出空間智慧，也邀請大家思考，當戰火遠去，這些結構又如何成為記憶與反思的容器。
+            <p>
+                戰爭催生了獨特的建築形式，從城門、城牆到地下掩體，皆是生存與權力的具體表達。本展聚焦「門類建築」在戰爭中的角色，探討其在防禦、象徵與庇護上的多重意涵。透過歷史與現代案例，觀眾將見證這些建築如何在極端環境下孕育出空間智慧，也邀請大家思考，當戰火遠去，這些結構又如何成為記憶與反思的容器。
+            </p>
+            <br/>
+            <p>
                 選擇主題的原因：近年來，全球局勢動盪，戰爭與衝突頻仍，建築空間再次成為防禦、庇護與象徵權力的重要載體。面對新的戰爭型態與人道危機，我們回望歷史中「戰爭門類建築」的演變，不僅是對人類空間智慧的致敬，也是對和平價值的深刻呼喚。本展希望在當代脈絡下，重新審視建築如何記錄戰爭的痕跡，同時啟發我們思考，在不確定的未來，空間能如何守護生命與記憶。
             </p>
         </section>
         <section id="design-detail">
             <h3>設計概念及細節特色</h3>
             <div class="container">
-                <div class="card">
+                <div class="card c1">
                     <div class="title">傳遞的意念</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-                    <div class="content">本展覽欲傳遞之核心理念在乎透過探討「門」此一象徵性結構於世界文化中之表現形式，探究人類戰爭歷史文化與建築藝術之交錯關聯，使目標受眾進一步思索門在不同文化背景（中國、歐洲）下的戰鬥象徵意義及其歷史、政治、藝術等文化價值，展覽希望能夠引發目標受眾對於不同時期和地區「門」文化的反思，深入理解它們與社會變革和戰爭歷史脈絡的密切聯繫。</div>
+                    <div class="content">本展覽欲傳遞之核心理念在乎透過探討「門」此一象徵性結構於世界文化中之表現形式，探究人類戰爭歷史文化與建築藝術之交錯關聯，使目標受眾進一步思索門在中國與歐洲戰爭歷史中的不同表現與意義及其文化、政治、藝術等文化價值，展覽希望能夠引發目標受眾對於不同時期和地區「門」文化的反思，深入理解它們與社會變革和戰爭歷史脈絡的密切聯繫，進一步揭示「門」如何成為權力更迭與軍事歷史的物質見證，引導目標受眾思考門作為軍事節點所承載的政治宣示、疆域界定及集體記憶等功能。</div>
                 </div>
-                <div class="card">
+                <div class="card c2">
                     <div class="title">教育衍生性</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-                    <div class="content">就教育衍生性而言，本展覽藉由「門」之主題，呈現了特定領域（戰爭相關）之中國、歐洲文化歷史表現，其亦是一跨學科之學習體驗，亦即本展覽聚焦於當前一〇八課綱所強調之「探索、跨域、素養」等學習方針，支持目標受眾得透過展覽多元探索、跨域學習。目標受眾得從展覽中接觸到諸如歷史、地理、建築學、社會學等多領域面向，藉多元探索，除去觀賞建築外觀等客觀事實外，進一步能針對「門」文化背後之歷史意義和文化背景進行反思，而此跨域思維模式亦有助於目標受眾發展多元批判性思維，嘗試由多樣角度分析和詮釋事物。</div>
+                    <div class="content">就教育衍生性而言，本展覽藉由「門」之主題，呈現了特定領域（戰爭相關）之中國、歐洲文化歷史表現，構建跨文明軍事史學習場域，其亦是一跨學科之學習體驗，亦即本展覽緊扣當前一〇八課綱所強調之「探索、跨域、素養」等學習方針，支持目標受眾得透過展覽多元探索、跨域學習。目標受眾得從展覽中接觸到諸如歷史、地理、建築學、社會學等多領域面向，藉多元探索，除去觀賞建築外觀等客觀事實外，進一步能針對「門」文化背後之歷史意義和文化背景進行反思，帶領觀者深入理解背後所蘊含的權力關係、民族認同與歷史脈絡，從而培養批判性與跨文化對讀之能力。
+                    </div>
                 </div>
-                <div class="card">
+                <div class="card c3">
                     <div class="title">附加價值</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-heart-icon lucide-message-circle-heart"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7"/></svg>
                     <div class="content">本展覽得以突破時、地限制，同時向目標受眾展現中國、歐洲文化與各戰爭歷史時期之門的故事。透過展示多元「門」戰爭文化與各時期的歷史背景，目標受眾能欣賞不同文化與民族之建築藝術，亦能體會「門」作為歷史與文化之見證者之深遠意義。目標受眾得透過本展覽增進其跨文化之理解與對讀，廣泛吸收來自各方戰鬥歷史事件與建築美學之文化底蘊，使目標受眾進一步體會不同文化、不同背景（中國、歐洲）下的價值觀和世界觀，從而加深對世界多元性的理解與尊重，亦能拓展對建築設計與藝術表現形式的視野。
-
                 </div>
             </div>
         </section>
         <section id="design-architecture">
             <h3>設計與架構</h3>
-            <p>本展覽的總體架構將以歷史上所出現的門為核心，並將東方及西方作為兩大方向的主軸，分別展現二者文化的不同及多元性，其下再以各類文化歷史意涵藉以作為分類，如：戰爭、宗教、權力等，使觀眾可看見並深刻理解各地文化與歷史的多種面貌。</p>
-            <img src="/img/ar1.png" alt="ar1" width="auto" height="300px">
-            <p>而在設計上，我們希望將整體透過層遞的方式一步步推進觀眾的認知，即以時間為軸線，在各分類中逐步地將由古至今的門文化、門歷史詳細、精實地帶出，令觀眾得以藉由橫越時空的連結，明白不同時間節點中人們對於門及其文化、歷史的意義。故整體設計會呈現一種以點連線的模式，而將整體文物展出。</p>
-            <img src="/img/ar2.png" alt="ar2" width="auto" height="300px">
+            <div class="ar ar1">
+                <p>本展覽的總體架構將以歷史上所出現的門為核心，並將東方及西方作為兩大方向的主軸，分別展現二者文化的不同及多元性，其下再以各類文化歷史意涵藉以作為分類，如：戰爭、宗教、權力等，使觀眾可看見並深刻理解各地文化與歷史的多種面貌。</p>
+                <img src="/img/ar1.png" alt="ar1" width="auto" height="300px">
+            </div>
+            
+            <div class="ar ar2">
+                <p>而在設計上，我們希望將整體透過層遞的方式一步步推進觀眾的認知，即以時間為軸線，在各分類中逐步地將由古至今的門文化、門歷史詳細、精實地帶出，令觀眾得以藉由橫越時空的連結，明白不同時間節點中人們對於門及其文化、歷史的意義。故整體設計會呈現一種以點連線的模式，而將整體文物展出。</p>
+                <img src="/img/ar2.png" alt="ar2" width="auto" height="300px">
+            </div>
         </section>
         <section id="exhibition">
-            <h3>展覽</h3>
-            <button class="theme-toggle" aria-label="切換主題">
-                <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-                <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
-            <div style="margin-left: 2em;">
-                <h4>展示動線</h4>
-                東方門展區<br>
-                ▼<br>
-                西方門展區<br>
-            </div>
-
-            <h3>東方門展區</h3>
-
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+            <div class="container">
+                <div class="title">
+                    <h3>展覽</h3>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="swipe-container">
+                    <div class="east swiper">
+                        <h3>東方門展區</h3>
+                        
+                        <!-- Slide 1 -->
+                        
+                        <div class="card">
                             <div class="text">
                                 <h4>玉門關</h4>
                                 <p>漢武帝時期 甘肅敦煌<br>
@@ -115,10 +126,10 @@
                                 <img src="./img/玉門關.jpg" alt="玉門關">
                             </div>
                         </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+                        
+                        <!-- Slide 2 -->
+                        
+                        <div class="card">
                             <div class="text">
                                 <h4>雁門關</h4>
                                 <p>戰國末年 山西忻州<br>
@@ -129,25 +140,25 @@
                                 <img src="./img/雁門關.jpg" alt="雁門關">
                             </div>
                         </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+                        
+                        <!-- Slide 3 -->
+                        
+                        <div class="card">
                             <div class="text">
                                 <h4>居庸關</h4>
                                 <p>明代 北京市昌平區南口鎮<br>
                                     早於春秋戰國時代便有相關記載「天下九塞，居庸之一」，而其建設始於漢代，當時亦只是作為郡縣間的關口，並未納於長城的建築體制內。
-到了北魏時代，居庸關才修築成長城的一部分，並建設成長城上其中一座重要的關口。而自明朝起，居庸關便是防禦蒙古入侵的關鍵防線。明代建設大規模的長城工程，居庸關作為重要的軍事重地，承擔著保衛京師的重任，是北京西北方的軍事重鎮。
+                                    到了北魏時代，居庸關才修築成長城的一部分，並建設成長城上其中一座重要的關口。而自明朝起，居庸關便是防禦蒙古入侵的關鍵防線。明代建設大規模的長城工程，居庸關作為重要的軍事重地，承擔著保衛京師的重任，是北京西北方的軍事重鎮。
                                 </p>
                             </div>
                             <div class="image">
                                 <img src="./img/居庸關.jpg" alt="居庸關">
                             </div>
                         </div>
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+                        
+                        <!-- Slide 4 -->
+                        
+                        <div class="card">
                             <div class="text">
                                 <h4>山海關</h4>
                                 <p>明代 河北省秦皇島市<br>
@@ -158,15 +169,14 @@
                                 <img src="./img/山海關.jpg" alt="山海關">
                             </div>
                         </div>
+                        
+                        
                     </div>
-                </div>
-            </div>
-            <h3>西方門展區</h3>
-            <div class="swiper west-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+                    
+                    <div class="west swiper">
+                        <h3>西方門展區</h3>
+                        <!-- Slide 1 -->
+                        <div class="card">
                             <div class="text">
                                 <h4>凱旋門 Arc de triomphe de l'Étoile</h4>
                                 <p>1836年 Place Charles de Gaulle<br>
@@ -177,11 +187,8 @@
                                 <img src="./img/凱旋門.jpg" alt="凱旋門">
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+                        <!-- Slide 2 -->
+                        <div class="card">
                             <div class="text">
                                 <h4>布蘭登堡門 Brandenburger</h4>
                                 <p>1791年落成 德國柏林米特區<br>
@@ -192,10 +199,8 @@
                                 <img src="./img/布蘭登堡門.jpg" alt="布蘭登堡門">
                             </div>
                         </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="slide-content">
+                        <!-- Slide 3 -->
+                        <div class="card">
                             <div class="text">
                                 <h4>君士坦丁凱旋門 Arco di Costantino</h4>
                                 <p>315年落成 義大利羅馬<br>
@@ -207,10 +212,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- （可以繼續加更多 slide） -->
                 </div>
-
             </div>
         </section>
         <section id="events">
@@ -226,44 +228,48 @@
                     <div class="title">組長<span>柯良運</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile1.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>張弘憶</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile2.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>王瑞渝</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile3.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>賴淯傑</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile4.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>許家薰</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile5.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>許宸研</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile6.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>許立諭</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile7.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>張家銘</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile8.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>何柏翰</span></div>
                 </div>
                 <div class="profile-card">
-                    <img src="./img/profile0.png" width="250px" height="250px" object-fit="contain"/>
+                    <img src="./img/profile9.png" width="250px" height="250px" object-fit="contain"/>
                     <div class="title">組員<span>張嘉紋</span></div>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <hr />
+        <div class="footer">Copyright © 2025 Museum Group 5</div>
+    </footer>
 </body>
 <script src="./index.js"></script>
 </html>

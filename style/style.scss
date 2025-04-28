@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
 
 $main-color: rgb(108, 0, 0); // 深紅色
 $second-color: rgb(0, 45, 49); // 深青色
 $third-color: rgb(200, 170, 100); // 柔和金色
 $fourth-color: rgb(245, 245, 245); // 淺灰白色
-$fifth-color: rgba(255, 100, 100, 0.1); // 亮珊瑚紅
+$fifth-color: rgb(255, 191, 191); // 亮珊瑚紅
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Noto Sans TC", "Source Sans Pro", sans-serif;
+}
+p{
+    text-indent: 2.5rem;
 }
 nav{
     background-color: $main-color;
@@ -20,8 +23,17 @@ nav{
     display: flex;
     align-items: center;
     color: #fff;
-    h1{
+    div.head-title{
+        font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+        font-weight: 600;
         width: 100%;
+        font-size: 1.5rem;
+        div.small{
+            font-family: "Noto Sans TC", "Source Sans Pro", sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            color: #dfdfdf;
+        }
     }
     button.menu {
         display: none;
@@ -135,12 +147,17 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr;
         section{
-            padding: 3rem;
-            &#carouselbg{
+            padding: 3rem 0;
+            &.bg1{
                 background-image: url(/img/background.png);
+            }
+            &.bg2{
+                background-image: url(/img/background2.png);
+            }
+            &#carouselbg{
                 width: 100vw;
                 height: 100%;
-                section#carousel {
+                #carousel {
                     grid-column-start: 1;
                     grid-column-end: 3;
                     position: relative;
@@ -194,14 +211,202 @@ body{
                     
                 }
             }
+            
+            &#concept{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                padding: 1rem;
+                p{
+                    line-height: 2.5rem;
+                }
+            }
+            &#design-detail{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                background-color: $main-color;
+                color: #fff;
+                h3{
+                    color: #fff;
+                }
+                div.container{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1rem;
+                    
+                    div.card{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border-radius: 1rem;
+                        color: #000;
+                        margin: 0 0.5rem;
+                        padding: 1rem;
+                        .title{
+                            font-size: 1.25rem;
+                            padding: 1.5rem;
+                            font-weight: 600;
+                        }
+                        svg{
+                            margin-bottom: 1rem;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    div.c1{
+                        background-color: rgb(255, 247, 223);
+                    }
+                    div.c2{
+                        background-color: rgb(255, 223, 223);
+                    }
+                    div.c3{
+                        background-color: rgb(218, 255, 242);
+                    }
+                }
+            }
+            &#design-architecture{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                background-image: url(/img/background.png);
+                display: grid;
+                grid-template-columns: 1fr 6fr;
+                grid-template-rows: 1fr 1fr;
+                // width: 80vw;
+                justify-content: center;
+                h3{
+                    grid-row: 1/3;
+                    grid-column: 1/2;
+                    -webkit-writing-mode: vertical-lr;
+                    writing-mode: vertical-lr;
+                    place-self: center center;
+                    letter-spacing: 1rem;
+                }
+                .ar1{
+                    grid-row: 1/2;
+                    grid-column: 2/8;
+                }
+                .ar2{
+                    grid-row: 2/3;
+                    grid-column: 2/8;
+                }
+                .ar{
+                    display: flex;
+                    align-items: center;
+                    // flex-direction: column;
+                    gap: 1rem;
+                    p{
+                        line-height: 2.5rem;
+                    }
+                    img{
+                        aspect-ratio: 4/3;
+                        object-fit: contain;
+                    }
+                }
+            }
+            &#exhibition{
+                div.container{
+                    grid-column: 1 / 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 1rem;
+                    div.title{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .theme-toggle{
+                            background: none;
+                            border: 2px solid $main-color;
+                            padding: 0.5rem;
+                            cursor: pointer;
+                            border-radius: 16%;
+                            padding: 0 2rem;
+                            display: flex;
+                            align-items: center;
+                            color: var(--text-color);
+                            .east {
+                                display: block;
+                            }
+                            .west {
+                                display: none;
+                            }
+                            &[data-theme="west"] {
+                                .east {
+                                    display: none;
+                                }
+                                .west {
+                                    display: block;
+                                }
+                            }
+                        
+                            &:hover {
+                                background: $third-color;
+                                color:#fff;
+                            }
+                        }
+                    }
+                    div.swipe-container{
+                        display: flex;
+                        justify-content: space-evenly;
+                        gap: 2rem;
+                        width: 60vw;
+                        div.swiper{
+                            // display: flex;
+                            // flex-direction: column;
+                            // align-items: center;
+                            
+                            div.card{
+                                margin: 1rem 0;
+                                display: flex;
+                                flex-direction: column;
+                                border-radius: 1rem;
+                                border: $third-color thick solid;
+                                width: 400px;
+                                div.text{
+                                    order: 2;
+                                    grid-column: 1 / 2;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 1rem;
+                                    h4{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                div.image{
+                                    order: 1;
+                                    grid-column: 2 / 3;
+                                    img{
+                                        width: 100%;
+                                        aspect-ratio: 16/9;
+                                        object-fit: cover;
+                                        border-top-right-radius: 0.5rem;
+                                        border-top-left-radius: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#events{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
             &#about{
                 grid-column-start: 1;
                 grid-column-end: 3;
                 div.container{
+                    background-color: $main-color;
                     display: grid;
                     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                     gap: 1rem;
+                    padding: 2rem 1rem;
                     div.profile-card{
+                        background-color: #fff;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -229,50 +434,6 @@ body{
                     }
                 }
             }
-            &#concept{
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-            &#design-detail{
-                grid-column-start: 1;
-                grid-column-end: 3;
-                background: $fifth-color;
-                div.container{
-                    width: 100%;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                    gap: 1.25rem;
-                    div.card{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        .title{
-                            font-size: 1.25rem;
-                            padding: 1.5rem;
-                            font-weight: 600;
-                        }
-                        svg{
-                            margin-bottom: 1rem;
-                            width: 30px;
-                            height: 30px;
-                            color: $second-color;
-                        }
-                    }
-                }
-            }
-            &#design-architecture{
-                grid-column-start: 1;
-                grid-column-end: 3;
-                background-image: url(/img/background.png);
-            }
-            &#exhibition{
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-            &#events{
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
             h3{
                 font-size: 1.5rem;
                 color: $second-color;
@@ -289,46 +450,35 @@ body{
                 padding: 8px;
                 font-size: 1.2rem;
             }
+            section#exhibition{
+                div.container{
+                    div.swipe-container{
+                        flex-direction: column;
+                        width: 100%;
+                        div.west{
+                            margin-top: 1.5rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    hr{
+        width: 100%;
+        color:#898989
+    }
+    div.footer{
+        color:#6f6f6f;
+        padding: 1rem 0;
+    }
+}
 
-.swiper {
-    width: 100%;
-    // background-color: #fcfcfc;
-    padding: 50px 0;
-    position: relative;
-  }
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 0 50px;
-    color: rgb(7, 7, 7);
-  }
-  .slide-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .text {
-    width: 40%;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  .image {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-  }
-  .image img {
-    max-width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-  }
 @media screen and (max-width: 600px) {
     nav{
         ul{
@@ -339,3 +489,5 @@ body{
         }
     }
 }
+
+@import "label";
