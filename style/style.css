@@ -11,6 +11,11 @@ p {
   text-indent: 2.5rem;
 }
 
+h3 {
+  font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+
 nav {
   background-color: rgb(108, 0, 0);
   padding: 1rem;
@@ -433,6 +438,18 @@ body main section h3 {
   }
   body main section#exhibition div.container div.swipe-container div.west {
     margin-top: 1.5rem;
+  }
+  body main section#design-architecture {
+    display: flex;
+    flex-direction: column;
+  }
+  body main section#design-architecture h3 {
+    writing-mode: horizontal-tb;
+  }
+  body main section#design-architecture div.ar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
   }
 }
 

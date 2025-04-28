@@ -15,6 +15,10 @@ $fifth-color: rgb(255, 191, 191); // 亮珊瑚紅
 p{
     text-indent: 2.5rem;
 }
+h3{
+    font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+    font-weight: 600;
+}
 nav{
     background-color: $main-color;
     padding: 1rem;
@@ -459,6 +463,19 @@ body{
                             margin-top: 1.5rem;
                         }
                     }
+                }
+            }
+            section#design-architecture{
+                display: flex;
+                flex-direction: column;
+                h3{
+                    -webkit-writing-mode: horizontal-tb;
+                    writing-mode: horizontal-tb;
+                }
+                div.ar{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 1rem;
                 }
             }
         }
