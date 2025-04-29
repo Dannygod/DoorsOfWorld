@@ -7,6 +7,12 @@
   font-family: "Noto Sans TC", "Source Sans Pro", sans-serif;
 }
 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 p {
   text-indent: 2.5rem;
 }
@@ -43,14 +49,16 @@ nav button.menu {
   background: none;
   border: none;
   border-radius: 50%;
+  width: 40px;
   aspect-ratio: 1/1;
+  content: none;
 }
 nav button.menu:hover {
   background-color: rgb(200, 170, 100);
   cursor: pointer;
 }
 nav button.menu svg {
-  margin: 0.5rem;
+  margin: auto;
   color: #fff;
 }
 nav div.modal-container {
@@ -90,7 +98,11 @@ nav div.modal-container div.modal button.close {
   z-index: 10;
   border-radius: 50%;
   padding: 0.25rem;
+  width: 40px;
   aspect-ratio: 1/1;
+}
+nav div.modal-container div.modal button.close svg {
+  margin: auto;
 }
 nav div.modal-container div.modal button.close:hover {
   color: #fff;
@@ -140,10 +152,6 @@ body {
   margin: 0;
   height: 100%;
 }
-body main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 body main section {
   padding: 3rem 0;
 }
@@ -176,12 +184,14 @@ body main section#carouselbg #carousel img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* 圖片自適應容器 */
+     object-fit: cover;
+  /* 圖片自適應容器 */
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* 淡入淡出效果 */
+  transition: opacity 0.5s ease-in-out;
+  /* 淡入淡出效果 */
 }
 body main section#carouselbg #carousel img.active {
   opacity: 1;
@@ -191,7 +201,8 @@ body main section#carouselbg #carousel .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(108, 0, 0, 0.7); /* 主色深紅色 */
+  background-color: rgba(108, 0, 0, 0.7);
+  /* 主色深紅色 */
   color: #fff;
   border: none;
   padding: 10px;
