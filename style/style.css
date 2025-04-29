@@ -353,7 +353,6 @@ body main section#exhibition div.container div.swipe-container {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  width: 60vw;
 }
 body main section#exhibition div.container div.swipe-container div.swiper div.card {
   margin: 1rem 0;
