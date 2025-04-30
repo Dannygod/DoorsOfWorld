@@ -23,7 +23,7 @@ h3 {
 }
 
 nav {
-  background-color: rgb(108, 0, 0);
+  background-color: rgb(118, 0, 0);
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -54,7 +54,7 @@ nav button.menu {
   content: none;
 }
 nav button.menu:hover {
-  background-color: rgb(200, 170, 100);
+  background-color: rgb(6, 47, 91);
   cursor: pointer;
 }
 nav button.menu svg {
@@ -85,7 +85,7 @@ nav div.modal-container div.modal {
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
-  border: rgb(200, 170, 100) 3px solid;
+  border: rgb(6, 47, 91) 3px solid;
 }
 nav div.modal-container div.modal button.close {
   position: absolute;
@@ -93,7 +93,7 @@ nav div.modal-container div.modal button.close {
   right: 8px;
   background: none;
   border: none;
-  color: rgb(200, 170, 100);
+  color: rgb(6, 47, 91);
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
@@ -106,7 +106,7 @@ nav div.modal-container div.modal button.close svg {
 }
 nav div.modal-container div.modal button.close:hover {
   color: #fff;
-  background-color: rgb(200, 170, 100);
+  background-color: rgb(6, 47, 91);
 }
 nav div.modal-container div.modal ul.modal {
   list-style: none;
@@ -144,7 +144,7 @@ nav ul a {
   border-radius: 1rem;
 }
 nav ul a:hover {
-  background: rgb(200, 170, 100);
+  background: rgb(6, 47, 91);
   color: #fff;
 }
 
@@ -156,10 +156,10 @@ body main section {
   padding: 3rem 0;
 }
 body main section.bg1 {
-  background-image: url(/img/background.png);
+  background-image: url(./img/background.png);
 }
 body main section.bg2 {
-  background-image: url(/img/background2.png);
+  background-image: url(./img/background2.png);
 }
 body main section#carouselbg {
   width: 100vw;
@@ -173,7 +173,7 @@ body main section#carouselbg #carousel {
   max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
-  height: 400px;
+  height: 350px;
 }
 body main section#carouselbg #carousel .carousel-container {
   display: flex;
@@ -218,7 +218,7 @@ body main section#carouselbg #carousel .carousel-btn.next {
   right: 10px;
 }
 body main section#carouselbg #carousel .carousel-btn:hover {
-  background-color: rgb(200, 170, 100);
+  background-color: rgb(6, 47, 91);
 }
 body main section#concept {
   grid-column-start: 1;
@@ -231,7 +231,7 @@ body main section#concept p {
 body main section#design-detail {
   grid-column-start: 1;
   grid-column-end: 3;
-  background-color: rgb(108, 0, 0);
+  background-color: rgb(118, 0, 0);
   color: #fff;
 }
 body main section#design-detail h3 {
@@ -248,14 +248,17 @@ body main section#design-detail div.container div.card {
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
-  color: #000;
+  color: #fff;
   margin: 0 0.5rem;
   padding: 1rem;
+  background-image: url(/img/background3.jpg);
 }
 body main section#design-detail div.container div.card .title {
   font-size: 1.25rem;
   padding: 1.5rem;
   font-weight: 600;
+  position: relative;
+  z-index: 3;
 }
 body main section#design-detail div.container div.card svg {
   margin-bottom: 1rem;
@@ -263,7 +266,7 @@ body main section#design-detail div.container div.card svg {
   height: 30px;
 }
 body main section#design-detail div.container div.c1 {
-  background-color: rgb(255, 247, 223);
+  background-color: rgba(255, 247, 223, 0.8);
 }
 body main section#design-detail div.container div.c2 {
   background-color: rgb(255, 223, 223);
@@ -314,7 +317,7 @@ body main section#exhibition div.container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 body main section#exhibition div.container div.title {
   width: 100%;
@@ -324,7 +327,7 @@ body main section#exhibition div.container div.title {
 }
 body main section#exhibition div.container div.title .theme-toggle {
   background: none;
-  border: 2px solid rgb(108, 0, 0);
+  border: 2px solid rgb(118, 0, 0);
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 16%;
@@ -346,7 +349,7 @@ body main section#exhibition div.container div.title .theme-toggle[data-theme=we
   display: block;
 }
 body main section#exhibition div.container div.title .theme-toggle:hover {
-  background: rgb(200, 170, 100);
+  background: rgb(6, 47, 91);
   color: #fff;
 }
 body main section#exhibition div.container div.swipe-container {
@@ -354,13 +357,18 @@ body main section#exhibition div.container div.swipe-container {
   justify-content: space-evenly;
   gap: 2rem;
 }
+body main section#exhibition div.container div.swipe-container div.swiper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body main section#exhibition div.container div.swipe-container div.swiper div.card {
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  border: rgb(200, 170, 100) thick solid;
-  width: 400px;
+  border: rgb(6, 47, 91) thick solid;
+  width: 350px;
 }
 body main section#exhibition div.container div.swipe-container div.swiper div.card div.text {
   order: 2;
@@ -373,6 +381,11 @@ body main section#exhibition div.container div.swipe-container div.swiper div.ca
 }
 body main section#exhibition div.container div.swipe-container div.swiper div.card div.text h4 {
   font-size: 1.2rem;
+  color: rgb(118, 0, 0);
+  text-align: center;
+}
+body main section#exhibition div.container div.swipe-container div.swiper div.card div.text span {
+  color: rgb(6, 47, 91);
 }
 body main section#exhibition div.container div.swipe-container div.swiper div.card div.image {
   order: 1;
@@ -387,15 +400,21 @@ body main section#exhibition div.container div.swipe-container div.swiper div.ca
   border-top-left-radius: 0.5rem;
 }
 body main section#events {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./img/background2.png);
+  width: 100%;
+}
+body main section#events img {
+  width: 350px;
 }
 body main section#about {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 body main section#about div.container {
-  background-color: rgb(108, 0, 0);
+  background-color: rgb(118, 0, 0);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
@@ -407,7 +426,7 @@ body main section#about div.container div.profile-card {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: rgb(200, 170, 100) 2px dashed;
+  border: rgb(6, 47, 91) 2px dashed;
   border-radius: 1rem;
 }
 body main section#about img {
@@ -422,15 +441,15 @@ body main section#about img {
 }
 body main section#about .title {
   margin-bottom: 1rem;
-  color: rgb(108, 0, 0);
+  color: rgb(118, 0, 0);
 }
 body main section#about .title span {
   padding-left: 0.7rem;
-  color: rgb(0, 45, 49);
+  color: rgb(6, 47, 91);
 }
 body main section h3 {
   font-size: 1.5rem;
-  color: rgb(0, 45, 49);
+  color: rgb(6, 47, 91);
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -508,7 +527,7 @@ footer div.footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(0, 45, 49);
+  background-color: rgb(6, 47, 91);
   transition: 0.4s;
 }
 
@@ -524,7 +543,7 @@ footer div.footer {
 }
 
 input:checked + .slider {
-  background-color: rgb(108, 0, 0);
+  background-color: rgb(118, 0, 0);
 }
 
 input:focus + .slider {

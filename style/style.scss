@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
 
-$main-color: rgb(108, 0, 0); // 深紅色
-$second-color: rgb(0, 45, 49); // 深青色
-$third-color: rgb(200, 170, 100); // 柔和金色
+$main-color: rgb(118, 0, 0); // 深紅色
+$second-color: rgb(6, 47, 91); // 深青色
+$third-color: rgb(6, 47, 91); // 柔和金色
 $fourth-color: rgb(245, 245, 245); // 淺灰白色
 $fifth-color: rgb(255, 191, 191); // 亮珊瑚紅
 
@@ -188,11 +188,11 @@ body {
             padding: 3rem 0;
 
             &.bg1 {
-                background-image: url(/img/background.png);
+                background-image: url(./img/background.png);
             }
 
             &.bg2 {
-                background-image: url(/img/background2.png);
+                background-image: url(./img/background2.png);
             }
 
             &#carouselbg {
@@ -207,7 +207,7 @@ body {
                     max-width: 800px;
                     margin: 0 auto;
                     overflow: hidden;
-                    height: 400px;
+                    height: 350px;
 
                     .carousel-container {
                         display: flex;
@@ -295,14 +295,19 @@ body {
                         flex-direction: column;
                         align-items: center;
                         border-radius: 1rem;
-                        color: #000;
+                        color: #fff;
                         margin: 0 0.5rem;
                         padding: 1rem;
-
+                        background-image: url(/img/background3.jpg);
+                        // filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
+                        // clip-path: inset(1rem);
+                        // filter: blur(20px);
                         .title {
                             font-size: 1.25rem;
                             padding: 1.5rem;
                             font-weight: 600;
+                            position: relative;
+                            z-index: 3;
                         }
 
                         svg {
@@ -313,7 +318,7 @@ body {
                     }
 
                     div.c1 {
-                        background-color: rgb(255, 247, 223);
+                        background-color: rgb(255, 247, 223, 0.8);
                     }
 
                     div.c2 {
@@ -379,7 +384,7 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    padding: 0 1rem;
+                    padding: 0 0.5rem;
 
                     div.title {
                         width: 100%;
@@ -430,9 +435,9 @@ body {
                         // width: 60vw;
 
                         div.swiper {
-                            // display: flex;
-                            // flex-direction: column;
-                            // align-items: center;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
 
                             div.card {
                                 margin: 1rem 0;
@@ -440,7 +445,7 @@ body {
                                 flex-direction: column;
                                 border-radius: 1rem;
                                 border: $third-color thick solid;
-                                width: 400px;
+                                width: 350px;
 
                                 div.text {
                                     order: 2;
@@ -453,6 +458,11 @@ body {
 
                                     h4 {
                                         font-size: 1.2rem;
+                                        color: $main-color;
+                                        text-align: center;
+                                    }
+                                    span { 
+                                        color: $second-color;
                                     }
                                 }
 
@@ -475,8 +485,15 @@ body {
             }
 
             &#events {
-                grid-column-start: 1;
-                grid-column-end: 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-image: url(./img/background2.png);
+                width: 100%;
+                img{
+                    width: 350px;
+                    
+                }
             }
 
             &#about {
