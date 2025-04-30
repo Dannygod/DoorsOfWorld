@@ -227,4 +227,4 @@ renderSlides(westDoors, '.west.swiper');
 
 
 const wrapper = document.querySelector('.east.swiper');
-console.log(wrapper);
+// console.log(wrapper);

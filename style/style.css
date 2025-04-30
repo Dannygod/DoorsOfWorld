@@ -156,10 +156,10 @@ body main section {
   padding: 3rem 0;
 }
 body main section.bg1 {
-  background-image: url(./img/background.png);
+  background-image: url(/img/background.png);
 }
 body main section.bg2 {
-  background-image: url(./img/background2.png);
+  background-image: url(/img/background2.png);
 }
 body main section#carouselbg {
   width: 100vw;
@@ -231,7 +231,10 @@ body main section#concept p {
 body main section#design-detail {
   grid-column-start: 1;
   grid-column-end: 3;
-  background-color: rgb(118, 0, 0);
+  background-image: url(/img/news.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 body main section#design-detail h3 {
@@ -242,8 +245,10 @@ body main section#design-detail div.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  background: none;
 }
 body main section#design-detail div.container div.card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,28 +256,31 @@ body main section#design-detail div.container div.card {
   color: #fff;
   margin: 0 0.5rem;
   padding: 1rem;
-  background-image: url(/img/background3.jpg);
+  background: none;
+  overflow: hidden;
 }
 body main section#design-detail div.container div.card .title {
   font-size: 1.25rem;
   padding: 1.5rem;
   font-weight: 600;
   position: relative;
-  z-index: 3;
 }
 body main section#design-detail div.container div.card svg {
   margin-bottom: 1rem;
   width: 30px;
   height: 30px;
 }
+body main section#design-detail div.container div.card > * {
+  z-index: 1;
+}
 body main section#design-detail div.container div.c1 {
-  background-color: rgba(255, 247, 223, 0.8);
+  background-color: rgba(255, 247, 223, 0.38);
 }
 body main section#design-detail div.container div.c2 {
-  background-color: rgb(255, 223, 223);
+  background-color: rgba(255, 223, 223, 0.38);
 }
 body main section#design-detail div.container div.c3 {
-  background-color: rgb(218, 255, 242);
+  background-color: rgba(218, 255, 242, 0.38);
 }
 body main section#design-architecture {
   grid-column-start: 1;
@@ -403,15 +411,35 @@ body main section#events {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(./img/background2.png);
   width: 100%;
 }
-body main section#events img {
+body main section#events div.title {
+  display: flex;
+  gap: 1rem;
+}
+body main section#events img.big {
   width: 350px;
 }
 body main section#about {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+body main section#about div.text {
+  margin: 0 auto;
+  width: 80vw;
+}
+body main section#about div.text p {
+  line-height: 2.7rem;
+  font-size: 1rem;
+}
+body main section#about div.text p span {
+  font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(6, 47, 91);
+  padding-right: 0.25rem;
+}
+body main section#about div.text h3 {
+  margin-top: 1rem;
 }
 body main section#about div.container {
   background-color: rgb(118, 0, 0);
