@@ -6,6 +6,26 @@ $third-color: rgb(6, 47, 91); // 柔和金色
 $fourth-color: rgb(245, 245, 245); // 淺灰白色
 $fifth-color: rgb(255, 191, 191); // 亮珊瑚紅
 
+@mixin beautify_text{
+    div.text{
+        margin: 0 auto;
+        width: 80vw;
+        p{
+            line-height: 2.7rem;
+            font-size: 1rem;
+            span{
+                font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+                font-size: 1.5rem;
+                color: $second-color;
+                padding-right: 0.25rem;
+            }
+        }
+        h3{
+            margin-top: 1rem;
+        }
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +47,9 @@ h3 {
     font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
     font-weight: 600;
 }
-
+.space{
+    margin: 2rem 0;
+}
 nav {
     background-color: $main-color;
     padding: 1rem;
@@ -269,9 +291,7 @@ body {
                 grid-column-end: 3;
                 padding: 1rem;
 
-                p {
-                    line-height: 2.5rem;
-                }
+                @include beautify_text;
             }
 
             &#design-detail {
@@ -387,7 +407,10 @@ body {
                     }
                 }
             }
-
+            &#goal-group{
+                
+                @include beautify_text;
+            }
             &#exhibition {
                 div.container {
                     grid-column: 1 / 2;
@@ -514,23 +537,8 @@ body {
                 grid-column-start: 1;
                 grid-column-end: 3;
                 
-                div.text{
-                    margin: 0 auto;
-                    width: 80vw;
-                    p{
-                        line-height: 2.7rem;
-                        font-size: 1rem;
-                        span{
-                            font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
-                            font-size: 1.5rem;
-                            color: $second-color;
-                            padding-right: 0.25rem;
-                        }
-                    }
-                    h3{
-                        margin-top: 1rem;
-                    }
-                }
+                @include beautify_text;
+                
                 div.container {
                     background-color: $main-color;
                     display: grid;
@@ -650,3 +658,4 @@ footer {
 }
 
 @import "label";
+

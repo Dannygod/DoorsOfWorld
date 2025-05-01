@@ -22,6 +22,10 @@ h3 {
   font-weight: 600;
 }
 
+.space {
+  margin: 2rem 0;
+}
+
 nav {
   background-color: rgb(118, 0, 0);
   padding: 1rem;
@@ -225,8 +229,22 @@ body main section#concept {
   grid-column-end: 3;
   padding: 1rem;
 }
-body main section#concept p {
-  line-height: 2.5rem;
+body main section#concept div.text {
+  margin: 0 auto;
+  width: 80vw;
+}
+body main section#concept div.text p {
+  line-height: 2.7rem;
+  font-size: 1rem;
+}
+body main section#concept div.text p span {
+  font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(6, 47, 91);
+  padding-right: 0.25rem;
+}
+body main section#concept div.text h3 {
+  margin-top: 1rem;
 }
 body main section#design-detail {
   grid-column-start: 1;
@@ -318,6 +336,23 @@ body main section#design-architecture .ar img {
   aspect-ratio: 4/3;
   -o-object-fit: contain;
      object-fit: contain;
+}
+body main section#goal-group div.text {
+  margin: 0 auto;
+  width: 80vw;
+}
+body main section#goal-group div.text p {
+  line-height: 2.7rem;
+  font-size: 1rem;
+}
+body main section#goal-group div.text p span {
+  font-family: "Noto Serif TC", "Noto Sans TC", "Source Sans Pro", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(6, 47, 91);
+  padding-right: 0.25rem;
+}
+body main section#goal-group div.text h3 {
+  margin-top: 1rem;
 }
 body main section#exhibition div.container {
   grid-column: 1/2;
