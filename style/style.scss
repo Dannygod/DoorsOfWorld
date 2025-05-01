@@ -188,11 +188,11 @@ body {
             padding: 3rem 0;
 
             &.bg1 {
-                background-image: url(/img/background.png);
+                background-image: url("../img/background.png");
             }
 
             &.bg2 {
-                background-image: url(/img/background2.png);
+                background-image: url("../img/background2.png");
             }
 
             &#carouselbg {
@@ -278,7 +278,7 @@ body {
                 grid-column-start: 1;
                 grid-column-end: 3;
                 // background-color: $main-color;
-                background-image: url(/img/news.png);
+                background-image: url("../img/news.png");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -345,7 +345,7 @@ body {
             &#design-architecture {
                 grid-column-start: 1;
                 grid-column-end: 3;
-                background-image: url(/img/background.png);
+                background-image: url("../img/background.png");
                 display: grid;
                 grid-template-columns: 1fr 6fr;
                 grid-template-rows: 1fr 1fr;

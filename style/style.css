@@ -156,10 +156,10 @@ body main section {
   padding: 3rem 0;
 }
 body main section.bg1 {
-  background-image: url(/img/background.png);
+  background-image: url("../img/background.png");
 }
 body main section.bg2 {
-  background-image: url(/img/background2.png);
+  background-image: url("../img/background2.png");
 }
 body main section#carouselbg {
   width: 100vw;
@@ -231,7 +231,7 @@ body main section#concept p {
 body main section#design-detail {
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(/img/news.png);
+  background-image: url("../img/news.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -285,7 +285,7 @@ body main section#design-detail div.container div.c3 {
 body main section#design-architecture {
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(/img/background.png);
+  background-image: url("../img/background.png");
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr 1fr;
