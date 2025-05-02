@@ -131,6 +131,9 @@ nav div.modal-container div.modal ul.modal li a {
 nav div.modal-container div.modal ul.modal li:hover {
   color: #f0f0f0;
 }
+nav div.modal-container div.modal ul.modal li:hover a {
+  color: #fff;
+}
 nav ul {
   display: flex;
   width: 100%;
