@@ -215,9 +215,11 @@ body {
             &.bg1 {
                 background-image: url("../img/background.png");
             }
-
             &.bg2 {
                 background-image: url("../img/background2.png");
+            }
+            &.bg3 {
+                background-image: url("../img/background3.png");
             }
 
             &#carouselbg {
@@ -317,7 +319,7 @@ body {
                     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                     gap: 1rem;
                     background: none;
-                    div.card {
+                    div.detail-card {
                         position: relative;
                         
                         display: flex;
@@ -440,6 +442,7 @@ body {
                     div.swipe-container {
                         max-width: 1200px;
                         margin: 0 auto;
+                        width: 100%;
 
                         div.east , div.west{
                             position: relative;
@@ -624,4 +627,6 @@ footer {
 
 @import "label";
 @import "owl";
+@import "door-modal";
+
 

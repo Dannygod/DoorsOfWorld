@@ -46,7 +46,7 @@
     </nav>
 
     <main>
-        <section id="events">
+        <section id="events" class="bg3">
             <div class="title">
                 <img src="./img/announcement.png" alt="" width="30px" height="30px">
                 <h3>活動/最新消息</h3>
@@ -70,12 +70,7 @@
         <section id="carouselbg" class="bg1">
             <section id="carousel">
                 <div class="carousel-container">
-                    <img src="./img/布蘭登堡門.jpg" alt="文化門圖片 1" class="active" id="i">
-                    <img src="./img/霍爾斯滕門.png" alt="文化門圖片 2" id="i">
-                    <img src="./img/劍門關.png" alt="文化門圖片 3" id="i">
-                    <img src="./img/居庸關.jpg" alt="文化門圖片 4" id="i">
-                    <img src="./img/梅嫩門.png" alt="文化門圖片 5" id="i">
-                    <img src="./img/陽關.png" alt="文化門圖片 6" id="i">
+                    <!-- 圖片將由 JavaScript 動態載入 -->
                 </div>
                 <button class="carousel-btn prev" id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
                 <button class="carousel-btn next" id="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -99,18 +94,18 @@
         <section id="design-detail">
             <h3>設計概念及細節特色</h3>
             <div class="container">
-                <div class="card c1">
+                <div class="detail-card c1">
                     <div class="title">傳遞的意念</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
                     <div class="content">本展覽欲傳遞之核心理念在乎透過探討「門」此一象徵性結構於世界文化中之表現形式，探究人類戰爭歷史文化與建築藝術之交錯關聯，使目標受眾進一步思索門在中國與歐洲戰爭歷史中的不同表現與意義及其文化、政治、藝術等文化價值，展覽希望能夠引發目標受眾對於不同時期和地區「門」文化的反思，深入理解它們與社會變革和戰爭歷史脈絡的密切聯繫，進一步揭示「門」如何成為權力更迭與軍事歷史的物質見證，引導目標受眾思考門作為軍事節點所承載的政治宣示、疆域界定及集體記憶等功能。</div>
                 </div>
-                <div class="card c2">
+                <div class="detail-card c2">
                     <div class="title">教育衍生性</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
                     <div class="content">就教育衍生性而言，本展覽藉由「門」之主題，呈現了特定領域（戰爭相關）之中國、歐洲文化歷史表現，構建跨文明軍事史學習場域，其亦是一跨學科之學習體驗，亦即本展覽緊扣當前一〇八課綱所強調之「探索、跨域、素養」等學習方針，支持目標受眾得透過展覽多元探索、跨域學習。目標受眾得從展覽中接觸到諸如歷史、地理、建築學、社會學等多領域面向，藉多元探索，除去觀賞建築外觀等客觀事實外，進一步能針對「門」文化背後之歷史意義和文化背景進行反思，帶領觀者深入理解背後所蘊含的權力關係、民族認同與歷史脈絡，從而培養批判性與跨文化對讀之能力。
                     </div>
                 </div>
-                <div class="card c3">
+                <div class="detail-card c3">
                     <div class="title">附加價值</div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-heart-icon lucide-message-circle-heart"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7"/></svg>
                     <div class="content">本展覽得以突破時、地限制，同時向目標受眾展現中國、歐洲文化與各戰爭歷史時期之門的故事。透過展示多元「門」戰爭文化與各時期的歷史背景，目標受眾能欣賞不同文化與民族之建築藝術，亦能體會「門」作為歷史與文化之見證者之深遠意義。目標受眾得透過本展覽增進其跨文化之理解與對讀，廣泛吸收來自各方戰鬥歷史事件與建築美學之文化底蘊，使目標受眾進一步體會不同文化、不同背景（中國、歐洲）下的價值觀和世界觀，從而加深對世界多元性的理解與尊重，亦能拓展對建築設計與藝術表現形式的視野。
@@ -135,7 +130,7 @@
                 <p>我們的目標對象為10歲以上的觀眾，因本展覽需要具有一定的文化歷史基礎，方能對於展品內涵有所連結，並進一步對整體文化歷史的變化得以思考與理解。在小學中年級開始培養社會學科教育後，人們開始能夠對過去的文化有所知曉，同時思考能力也將逐漸成熟。故結合以上兩點，我們認為將目標對象設於小學中高年級以上的觀眾，較能符合我們希望帶給觀眾的意念與思考。</p>
             </div>
         </section>
-        <section id="exhibition">
+        <section id="exhibition" class="bg2">
             <div class="container">
                 <div class="title">
                     <h3>線上展覽</h3>

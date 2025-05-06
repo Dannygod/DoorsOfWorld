@@ -168,6 +168,9 @@ body main section.bg1 {
 body main section.bg2 {
   background-image: url("../img/background2.png");
 }
+body main section.bg3 {
+  background-image: url("../img/background3.png");
+}
 body main section#carouselbg {
   width: 100vw;
   height: 100%;
@@ -268,7 +271,7 @@ body main section#design-detail div.container {
   gap: 1rem;
   background: none;
 }
-body main section#design-detail div.container div.card {
+body main section#design-detail div.container div.detail-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -280,18 +283,18 @@ body main section#design-detail div.container div.card {
   background: none;
   overflow: hidden;
 }
-body main section#design-detail div.container div.card .title {
+body main section#design-detail div.container div.detail-card .title {
   font-size: 1.25rem;
   padding: 1.5rem;
   font-weight: 600;
   position: relative;
 }
-body main section#design-detail div.container div.card svg {
+body main section#design-detail div.container div.detail-card svg {
   margin-bottom: 1rem;
   width: 30px;
   height: 30px;
 }
-body main section#design-detail div.container div.card > * {
+body main section#design-detail div.container div.detail-card > * {
   z-index: 1;
 }
 body main section#design-detail div.container div.c1 {
@@ -382,6 +385,7 @@ body main section#exhibition div.container .title .p {
 body main section#exhibition div.container div.swipe-container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 body main section#exhibition div.container div.swipe-container div.east, body main section#exhibition div.container div.swipe-container div.west {
   position: relative;
@@ -738,4 +742,132 @@ input:checked + .slider:before {
   .door-modal .modal-content .door-info .subtitle {
     font-size: 1rem;
   }
+}
+.door-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.door-modal.active {
+  display: flex;
+}
+.door-modal .modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.door-modal .modal-content .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.door-modal .modal-content .close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.door-modal .modal-content .close-btn svg {
+  width: 24px;
+  height: 24px;
+  color: #333;
+}
+.door-modal .modal-content .door-info h4 {
+  font-size: 1.5rem;
+  color: rgb(118, 0, 0);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.door-modal .modal-content .door-info .subtitle {
+  color: rgb(6, 47, 91);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.door-modal .modal-content .door-info .photo-gallery {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-stage-outer {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.door-modal .modal-content .door-info .photo-gallery img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-nav button {
+  background: rgba(255, 255, 255, 0.8) !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-nav button:hover {
+  background: rgb(255, 255, 255) !important;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-nav button svg {
+  width: 24px;
+  height: 24px;
+  color: #333;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-dots .owl-dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.door-modal .modal-content .door-info .photo-gallery .owl-dots .owl-dot.active {
+  background: #fff !important;
+  transform: scale(1.2);
+}
+.door-modal .modal-content .door-info p {
+  line-height: 1.6;
+  margin-top: 1rem;
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */
