@@ -50,7 +50,6 @@ const photos = [
     {"src": './img/door/維魯門2.png', "title": '維魯門'},
     {"src": './img/door/瑞士門1.png', "title": '瑞士門'},
     {"src": './img/door/瑞士門2.png', "title": '瑞士門'},
-    {"src": './img/door/瑞士門3.png', "title": '瑞士門'},
     {"src": './img/door/聖弗洛里安門1.png', "title": '聖弗洛里安門'},
     {"src": './img/door/尼格拉城門1.png', "title": '尼格拉城門'},
     {"src": './img/door/尼格拉城門2.png', "title": '尼格拉城門'},
@@ -143,7 +142,7 @@ const westDoors = [
     {
         title: `君士坦丁凱旋門<br/>Arco di Costantino`,
         subtitle: "315年落成 義大利羅馬",
-        description: `紀念羅馬帝國皇帝君士坦丁一世在312年的米爾維安橋戰役中取得的勝利而建，對於君士坦丁的統治至關重要，因為它幫助他打敗了競爭對手馬克森提烏斯，最終成為羅馬唯一的皇帝。拱門是他戰爭勝利的象徵。君士坦丁的勝利後，他成為羅馬帝國的基督教保護者，並在313年發布了米蘭敕令，使基督教成為合法宗教，這個轉折點對西方歷史和基督教的擴展至關重要。`,
+        description: `紀念羅馬帝國皇帝君士坦丁一世在312年的米爾維安橋戰役中取得勝利而建，對於君士坦丁的統治至關重要，因為它幫助他打敗了競爭對手馬克森提烏斯，最終成為羅馬唯一的皇帝。拱門是他戰爭勝利的象徵。君士坦丁的勝利後，他成為羅馬帝國的基督教保護者，並在313年發布了米蘭敕令，使基督教成為合法宗教，這個轉折點對西方歷史和基督教的擴展至關重要。`,
         image: "./img/door/君士坦丁凱旋門1.jpg",
         alt: "君士坦丁凱旋門"
     },
@@ -319,7 +318,7 @@ $(document).ready(function(){
         nav: true,
         dots: false,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 4500,
         autoplayHoverPause: true,
         navText: [
             '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
@@ -352,26 +351,63 @@ $(document).ready(function(){
         img.addEventListener('click', () => {
             const doorData = JSON.parse(img.dataset.door);
             doorInfo.querySelector('h4').innerHTML = doorData.title;
-            doorInfo.querySelector('.subtitle').textContent = doorData.subtitle;
-            doorInfo.querySelector('p').textContent = doorData.description;
+            doorInfo.querySelector('.subtitle').innerHTML = doorData.subtitle;
+            doorInfo.querySelector('p').innerHTML = doorData.description;
 
             // 清空現有的照片
             photoGallery.innerHTML = '';
 
             // 過濾相關照片
             const relatedPhotos = photos.filter(photo => {
-                // 移除標題中的 HTML 標籤和空格進行比較
-                const photoTitle = photo.title.replace(/<br\/>/g, '').trim();
-                const doorTitle = doorData.title.replace(/<br\/>/g, '').trim();
-                return photoTitle === doorTitle;
+                const photoTitle = photo.title;
+                const doorTitle = doorData.title;
+                // 使用 photoTitle 的長度來決定比對的字數
+                return doorTitle.substring(0, photoTitle.length) === photoTitle;
             });
+
+            // 創建輪播容器
+            const carouselContainer = document.createElement('div');
+            carouselContainer.className = 'owl-carousel owl-theme';
+            photoGallery.appendChild(carouselContainer);
 
             // 創建照片元素
             relatedPhotos.forEach(photo => {
+                const item = document.createElement('div');
+                item.className = 'item';
                 const img = document.createElement('img');
                 img.src = photo.src;
                 img.alt = photo.title;
-                photoGallery.appendChild(img);
+                item.appendChild(img);
+                carouselContainer.appendChild(item);
+            });
+
+            // 初始化輪播
+            $(carouselContainer).owlCarousel({
+                loop: false,
+                margin: 20,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 4500,
+                autoplayHoverPause: true,
+                navText: [
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>'
+                ],
+                responsive: {
+                    0: { 
+                        items: 1,
+                        nav: false
+                    },
+                    600: { 
+                        items: 1,
+                        nav: true
+                    },
+                    1000: { 
+                        items: 1,
+                        nav: true
+                    }
+                }
             });
 
             doorModal.classList.add('active');
