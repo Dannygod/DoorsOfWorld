@@ -392,45 +392,6 @@ body main section#exhibition div.container div.swipe-container div.east h3, body
   text-align: center;
   margin-bottom: 2rem;
 }
-body main section#exhibition div.container div.swipe-container div.east .swiper-wrapper, body main section#exhibition div.container div.swipe-container div.west .swiper-wrapper {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-body main section#exhibition div.container div.swipe-container div.east .swiper-slide, body main section#exhibition div.container div.swipe-container div.west .swiper-slide {
-  flex: 0 0 100%;
-  width: 100%;
-  padding: 0 1rem;
-}
-body main section#exhibition div.container div.swipe-container div.east .swiper-button, body main section#exhibition div.container div.swipe-container div.west .swiper-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(118, 0, 0, 0.7);
-  color: #fff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-body main section#exhibition div.container div.swipe-container div.east .swiper-button:hover, body main section#exhibition div.container div.swipe-container div.west .swiper-button:hover {
-  background-color: rgb(118, 0, 0);
-}
-body main section#exhibition div.container div.swipe-container div.east .swiper-button.prev, body main section#exhibition div.container div.swipe-container div.west .swiper-button.prev {
-  left: 0;
-}
-body main section#exhibition div.container div.swipe-container div.east .swiper-button.next, body main section#exhibition div.container div.swipe-container div.west .swiper-button.next {
-  right: 0;
-}
-body main section#exhibition div.container div.swipe-container div.east .swiper-button svg, body main section#exhibition div.container div.swipe-container div.west .swiper-button svg {
-  width: 24px;
-  height: 24px;
-}
 body main section#exhibition div.container div.swipe-container div.east div.card, body main section#exhibition div.container div.swipe-container div.west div.card {
   display: flex;
   flex-direction: column;

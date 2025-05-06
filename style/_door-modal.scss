@@ -1,0 +1,75 @@
+.door-modal {
+    // ... existing code ...
+
+    .door-info {
+        // ... existing code ...
+
+        .photo-gallery {
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .owl-nav {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+                padding: 0 20px;
+                pointer-events: none;
+
+                button {
+                    background: rgba(255, 255, 255, 0.8) !important;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50% !important;
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    pointer-events: auto;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 1) !important;
+                    }
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        color: #333;
+                    }
+                }
+            }
+
+            .owl-dots {
+                position: absolute;
+                bottom: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+
+                .owl-dot {
+                    width: 8px;
+                    height: 8px;
+                    background: rgba(255, 255, 255, 0.5) !important;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+
+                    &.active {
+                        background: #fff !important;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+} 
