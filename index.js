@@ -86,7 +86,7 @@ const eastDoors = [
     {
         title: "山海關",
         subtitle: "明代 河北省秦皇島市",
-        description: `山海關因為明長城最東側的關隘，被譽為“天下第一關”，自明朝以來，作為防禦外敵入侵的重地。1644年，明朝滅亡的重大事件——李自成攻入山海關，清軍入關，之後此門逐漸失去軍事用處，反而作為農民開墾或觀海勝地，然而當第一次鴉片戰爭爆發後，清軍才又在石河口等地設置炮台，同時由於沙皇俄國對東北地區的威脅日益嚴重，清朝政府於咸豐十年（1860年）重新打開山海關，允許農民出關前往部分地區開墾。`,
+        description: `山海關因為明長城最東側的關隘，被譽為"天下第一關"，自明朝以來，作為防禦外敵入侵的重地。1644年，明朝滅亡的重大事件——李自成攻入山海關，清軍入關，之後此門逐漸失去軍事用處，反而作為農民開墾或觀海勝地，然而當第一次鴉片戰爭爆發後，清軍才又在石河口等地設置炮台，同時由於沙皇俄國對東北地區的威脅日益嚴重，清朝政府於咸豐十年（1860年）重新打開山海關，允許農民出關前往部分地區開墾。`,
         image: "./img/山海關.jpg",
         alt: "山海關"
     },
@@ -131,7 +131,7 @@ const westDoors = [
     {
         title: `凱旋門<br/>Arc de triomphe de l'Étoile`,
         subtitle: "1836年 Place Charles de Gaulle",
-        description: `凱旋門建設始於1806年，拿破崙（Napoléon Bonaparte）為了慶祝法國軍隊在奧斯特里茨戰役（Bataille d’Austerlitz）中獲得勝利，乃興建「一道偉大的雕塑」，意欲迎接日後凱旋的法軍將士。然而，隨著拿破崙帝國的滅亡，工程於其後中止。直到1830年波旁王朝（Maison de Bourbon）被推翻後，路易・菲利普一世（Louis-Philippe Ier）接管政權，凱旋門的建設才於1836年完成，並在7月29日舉行落成典禮。`,
+        description: `凱旋門建設始於1806年，拿破崙（Napoléon Bonaparte）為了慶祝法國軍隊在奧斯特里茨戰役（Bataille d'Austerlitz）中獲得勝利，乃興建「一道偉大的雕塑」，意欲迎接日後凱旋的法軍將士。然而，隨著拿破崙帝國的滅亡，工程於其後中止。直到1830年波旁王朝（Maison de Bourbon）被推翻後，路易・菲利普一世（Louis-Philippe Ier）接管政權，凱旋門的建設才於1836年完成，並在7月29日舉行落成典禮。`,
         image: "./img/凱旋門.jpg",
         alt: "凱旋門"
     },
@@ -202,29 +202,96 @@ const westDoors = [
 // 共用函數：傳入展品資料、swiper-wrapper選擇器，幫你產生slide
 function renderSlides(data, wrapperSelector) {
     const wrapper = document.querySelector(wrapperSelector);
+    wrapper.innerHTML = ''; // 清空現有內容
+    
     data.forEach(door => {
-        const slide = document.createElement('div');
-        // slide.className = 'swiper-slide';
-        slide.innerHTML = `
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.innerHTML = `
             <div class="card">
-                <div class="text">
-                    <h4>${door.title}</h4>
-                    <span>${door.subtitle}</span>
-                    <p>${door.description}</p>
-                </div>
-                <div class="image">
-                    <img src="${door.image}" alt="${door.alt}">
-                </div>
+            <div class="text">
+                <h4>${door.title}</h4>
+                <span>${door.subtitle}</span>
+            </div>
+            <div class="image">
+                <img src="${door.image}" alt="${door.alt}" data-door='${JSON.stringify({
+                title: door.title,
+                subtitle: door.subtitle,
+                description: door.description
+            })}'>
+            </div>
             </div>
         `;
-        wrapper.appendChild(slide);
+        wrapper.appendChild(item);
     });
 }
 
 // 呼叫來渲染
-renderSlides(eastDoors, '.east.swiper');
-renderSlides(westDoors, '.west.swiper');
+renderSlides(eastDoors, '.east');
+renderSlides(westDoors, '.west');
 
+// 初始化輪播
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        navText: [
+            '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
+            '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>'
+        ],
+        responsive: {
+            0: { 
+                items: 1,
+                nav: false
+            },
+            600: { 
+                items: 2,
+                nav: true
+            },
+            1000: { 
+                items: 3,
+                nav: true
+            }
+        }
+    });
 
-const wrapper = document.querySelector('.east.swiper');
-// console.log(wrapper);
+    // 處理彈出視窗
+    const modal = document.querySelector('.door-modal');
+    const closeBtn = modal.querySelector('.close-btn');
+    const doorInfo = modal.querySelector('.door-info');
+
+    // 點擊圖片顯示彈出視窗
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('.owl-item img')) {
+            const doorData = JSON.parse(e.target.dataset.door);
+            doorInfo.querySelector('h4').innerHTML = doorData.title;
+            doorInfo.querySelector('.subtitle').textContent = doorData.subtitle;
+            doorInfo.querySelector('p').textContent = doorData.description;
+            modal.classList.add('active');
+        }
+    });
+
+    // 關閉彈出視窗
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    // 點擊背景關閉彈出視窗
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+    // ESC 鍵關閉彈出視窗
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+        }
+    });
+});

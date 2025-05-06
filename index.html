@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>君不見，青海頭—中國與歐洲的戰爭門類建築展</title>
 </head>
 <body>
@@ -142,12 +144,21 @@
                         <span class="slider round"></span>
                     </label> -->
                 </div>
+                <div class="title">
+                    <h3>東方門展區</h3>
+                    <h3 class="p">點擊圖片查看更多...</h3>
+                </div>
                 <div class="swipe-container">
-                    <div class="east swiper">
-                        <h3>東方門展區</h3>
+                    <div class="owl-carousel owl-theme east">
                     </div>
-                    <div class="west swiper">
-                        <h3>西方門展區</h3>
+                </div>
+                <div class="blank"></div>
+                <div class="title">
+                    <h3>西方門展區</h3>
+                    <h3 class="p">點擊圖片查看更多...</h3>
+                </div>
+                <div class="swipe-container">
+                    <div class="owl-carousel owl-theme west">
                     </div>
                 </div>
             </div>
@@ -204,6 +215,28 @@
         <hr />
         <div class="footer">Copyright © 2025 Museum Group 5</div>
     </footer>
+
+    <!-- 門的詳細資訊彈出視窗 -->
+    <div class="door-modal">
+        <div class="modal-content">
+            <button class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18"/>
+                    <path d="m6 6 12 12"/>
+                </svg>
+            </button>
+            <div class="door-info">
+                <h4></h4>
+                <div class="subtitle"></div>
+                <p></p>
+            </div>
+        </div>
+    </div>
 </body>
+<!-- 先載入 jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- 再載入 Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- 最後載入自訂腳本 -->
 <script src="./index.js"></script>
 </html>

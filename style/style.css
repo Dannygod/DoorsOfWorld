@@ -358,86 +358,109 @@ body main section#goal-group div.text h3 {
   margin-top: 1rem;
 }
 body main section#exhibition div.container {
-  grid-column: 1/2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 0.5rem;
 }
-body main section#exhibition div.container div.title {
+body main section#exhibition div.container .blank {
+  width: 100%;
+  height: 2rem;
+}
+body main section#exhibition div.container .title {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-body main section#exhibition div.container div.title .theme-toggle {
-  background: none;
-  border: 2px solid rgb(118, 0, 0);
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 16%;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
-}
-body main section#exhibition div.container div.title .theme-toggle .east {
-  display: block;
-}
-body main section#exhibition div.container div.title .theme-toggle .west {
-  display: none;
-}
-body main section#exhibition div.container div.title .theme-toggle[data-theme=west] .east {
-  display: none;
-}
-body main section#exhibition div.container div.title .theme-toggle[data-theme=west] .west {
-  display: block;
-}
-body main section#exhibition div.container div.title .theme-toggle:hover {
-  background: rgb(6, 47, 91);
-  color: #fff;
+body main section#exhibition div.container .title .p {
+  font-size: 1rem;
+  color: rgb(118, 0, 0);
 }
 body main section#exhibition div.container div.swipe-container {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-body main section#exhibition div.container div.swipe-container div.swiper {
+body main section#exhibition div.container div.swipe-container div.east, body main section#exhibition div.container div.swipe-container div.west {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+body main section#exhibition div.container div.swipe-container div.east h3, body main section#exhibition div.container div.swipe-container div.west h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+body main section#exhibition div.container div.swipe-container div.east .swiper-wrapper, body main section#exhibition div.container div.swipe-container div.west .swiper-wrapper {
   display: flex;
-  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+body main section#exhibition div.container div.swipe-container div.east .swiper-slide, body main section#exhibition div.container div.swipe-container div.west .swiper-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0 1rem;
+}
+body main section#exhibition div.container div.swipe-container div.east .swiper-button, body main section#exhibition div.container div.swipe-container div.west .swiper-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(118, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
-body main section#exhibition div.container div.swipe-container div.swiper div.card {
-  margin: 1rem 0;
+body main section#exhibition div.container div.swipe-container div.east .swiper-button:hover, body main section#exhibition div.container div.swipe-container div.west .swiper-button:hover {
+  background-color: rgb(118, 0, 0);
+}
+body main section#exhibition div.container div.swipe-container div.east .swiper-button.prev, body main section#exhibition div.container div.swipe-container div.west .swiper-button.prev {
+  left: 0;
+}
+body main section#exhibition div.container div.swipe-container div.east .swiper-button.next, body main section#exhibition div.container div.swipe-container div.west .swiper-button.next {
+  right: 0;
+}
+body main section#exhibition div.container div.swipe-container div.east .swiper-button svg, body main section#exhibition div.container div.swipe-container div.west .swiper-button svg {
+  width: 24px;
+  height: 24px;
+}
+body main section#exhibition div.container div.swipe-container div.east div.card, body main section#exhibition div.container div.swipe-container div.west div.card {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   border: rgb(6, 47, 91) thick solid;
-  width: 350px;
+  background-color: #fff;
 }
-body main section#exhibition div.container div.swipe-container div.swiper div.card div.text {
+body main section#exhibition div.container div.swipe-container div.east div.card div.text, body main section#exhibition div.container div.swipe-container div.west div.card div.text {
   order: 2;
-  grid-column: 1/2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
 }
-body main section#exhibition div.container div.swipe-container div.swiper div.card div.text h4 {
+body main section#exhibition div.container div.swipe-container div.east div.card div.text h4, body main section#exhibition div.container div.swipe-container div.west div.card div.text h4 {
   font-size: 1.2rem;
   color: rgb(118, 0, 0);
   text-align: center;
 }
-body main section#exhibition div.container div.swipe-container div.swiper div.card div.text span {
+body main section#exhibition div.container div.swipe-container div.east div.card div.text span, body main section#exhibition div.container div.swipe-container div.west div.card div.text span {
   color: rgb(6, 47, 91);
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
 }
-body main section#exhibition div.container div.swipe-container div.swiper div.card div.image {
+body main section#exhibition div.container div.swipe-container div.east div.card div.text p, body main section#exhibition div.container div.swipe-container div.west div.card div.text p {
+  text-indent: 0;
+  line-height: 1.6;
+}
+body main section#exhibition div.container div.swipe-container div.east div.card div.image, body main section#exhibition div.container div.swipe-container div.west div.card div.image {
   order: 1;
-  grid-column: 2/3;
 }
-body main section#exhibition div.container div.swipe-container div.swiper div.card div.image img {
+body main section#exhibition div.container div.swipe-container div.east div.card div.image img, body main section#exhibition div.container div.swipe-container div.west div.card div.image img {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
@@ -526,13 +549,6 @@ body main section h3 {
   body main section#carousel .carousel-btn {
     padding: 8px;
     font-size: 1.2rem;
-  }
-  body main section#exhibition div.container div.swipe-container {
-    flex-direction: column;
-    width: 100%;
-  }
-  body main section#exhibition div.container div.swipe-container div.west {
-    margin-top: 1.5rem;
   }
   body main section#design-architecture {
     display: flex;
@@ -627,4 +643,138 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.owl-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.owl-item img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.owl-item img:hover {
+  transform: scale(1.02);
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.owl-prev, .owl-next {
+  background: rgba(118, 0, 0, 0.7) !important;
+  color: white !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  margin: 0 1rem;
+}
+.owl-prev:hover, .owl-next:hover {
+  background: rgba(118, 0, 0, 0.9) !important;
+  transform: scale(1.1);
+}
+.owl-prev svg, .owl-next svg {
+  width: 24px;
+  height: 24px;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.door-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.door-modal.active {
+  display: flex;
+}
+.door-modal .modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.door-modal .modal-content .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(118, 0, 0);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.door-modal .modal-content .close-btn:hover {
+  background-color: rgba(118, 0, 0, 0.1);
+}
+.door-modal .modal-content .door-info h4 {
+  font-size: 1.5rem;
+  color: rgb(118, 0, 0);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.door-modal .modal-content .door-info .subtitle {
+  color: rgb(6, 47, 91);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+.door-modal .modal-content .door-info p {
+  line-height: 1.8;
+  text-indent: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+  .door-modal .modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  .door-modal .modal-content .door-info h4 {
+    font-size: 1.3rem;
+  }
+  .door-modal .modal-content .door-info .subtitle {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
